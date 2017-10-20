@@ -1,0 +1,199 @@
+,name,rank,country,region,inter_staff,total_staff,inter_students,total_students
+0,Massachusetts Institute of Technology (MIT) ,1,United States,North America,1679,2982,3717,11067
+1,Stanford University,2,United States,North America,2042,4285,3611,15878
+2,Harvard University,3,United States,North America,1311,4350,5266,22429
+3,California Institute of Technology (Caltech),4,United States,North America,350,953,647,2255
+4,University of Cambridge,5,United Kingdom,Europe,2278,5490,6699,18770
+5,University of Oxford,6,United Kingdom,Europe,2964,6750,7353,19720
+6,UCL (University College London),7,United Kingdom,Europe,2554,6345,14854,31080
+7,Imperial College London,8,United Kingdom,Europe,2071,3930,8746,16090
+8,University of Chicago,9,United States,North America,635,2449,3379,13557
+9,ETH Zurich - Swiss Federal Institute of Technology,10,Switzerland,Europe,1886,2477,7563,19815
+10,"Nanyang Technological University, Singapore (NTU)",11,Singapore,Asia,2993,4338,7251,25738
+11,Ecole Polytechnique Fédérale de Lausanne (EPFL),12,Switzerland,Europe,1300,1695,5896,10343
+12,Princeton University,13,United States,North America,246,1007,1793,8069
+13,Cornell University,14,United States,North America,970,2718,5411,21904
+14,National University of Singapore (NUS),15,Singapore,Asia,3086,5106,8917,32728
+15,Yale University,16,United States,North America,1708,4940,2469,12402
+16,Johns Hopkins University,17,United States,North America,1061,4462,4105,16146
+17,Columbia University,18,United States,North America,913,6189,8105,25045
+18,University of Pennsylvania,19,United States,North America,1383,5499,4250,20639
+19,The Australian National University,20,Australia,Oceania,927,1600,5551,14442
+20,Duke University,21,United States,North America,226,2938,2864,15320
+21,University of Michigan,21,United States,North America,1920,6809,7527,43147
+22,King's College London,23,United Kingdom,Europe,1513,3650,9451,23780
+23,The University of Edinburgh,23,United Kingdom,Europe,1553,4075,10551,28040
+24,Tsinghua University,25,China,Asia,932,5506,4072,36300
+25,The University of Hong Kong,26,Hong Kong,Asia,2085,3012,8230,20214
+26,"University of California, Berkeley (UCB)",27,United States,North America,1395,3321,6086,36703
+27,Northwestern University,28,United States,North America,1141,4231,3422,18675
+28,The University of Tokyo,28,Japan,Asia,254,4514,2639,27279
+29,The Hong Kong University of Science and Technology,30,Hong Kong,Asia,835,1150,2921,10375
+30,University of Toronto,31,Canada,North America,3905,9581,21910,72207
+31,McGill University,32,Canada,North America,1220,3646,9540,28837
+32,"University of California, Los Angeles (UCLA)",33,United States,North America,662,2859,6887,40114
+33,The University of Manchester,34,United Kingdom,Europe,1653,4910,13514,36670
+34,London School of Economics and Political Science (LSE),35,United Kingdom,Europe,687,1088,6748,9760
+35,Kyoto University,36,Japan,Asia,293,4060,1990,22974
+36,Seoul National University,36,South Korea,Asia,433,3930,2331,28064
+37,Peking University,38,China,Asia,1038,5185,7090,42136
+38,"University of California, San Diego (UCSD)",38,United States,North America,870,3694,6644,32237
+39,Fudan University,40,China,Asia,1178,4037,4680,29135
+40,KAIST - Korea Advanced Institute of Science & Technology,41,South Korea,Asia,147,1250,584,9826
+41,The University of Melbourne,41,Australia,Oceania,1477,3311,18030,42182
+42,"Ecole normale supérieure, Paris",43,France,Europe,75,178,374,1907
+43,University of Bristol,44,United Kingdom,Europe,942,2870,5099,20630
+44,The University of New South Wales (UNSW Sydney),45,Australia,Oceania,1612,2924,14292,39784
+45,The Chinese University of Hong Kong (CUHK),46,Hong Kong,Asia,1074,2208,4824,18037
+46,Carnegie Mellon University,47,United States,North America,425,1342,6385,13356
+47,The University of Queensland,47,Australia,Oceania,1870,3158,10420,37497
+48,City University of Hong Kong,49,Hong Kong,Asia,1027,1349,3273,9240
+49,The University of Sydney,50,Australia,Oceania,1829,3360,17030,46678
+50,University of British Columbia,51,Canada,North America,1635,4648,11388,50350
+51,Brown University,53,United States,North America,379,1303,1825,9251
+52,Delft University of Technology,54,Netherlands,Europe,701,1669,4634,16527
+53,University of Wisconsin-Madison,55,United States,North America,1151,5722,4920,38985
+54,Tokyo Institute of Technology,56,Japan,Asia,191,1563,1071,9832
+55,The University of Warwick,57,United Kingdom,Europe,890,2093,7703,19855
+56,University of Amsterdam,58,Netherlands,Europe,707,2600,3785,25967
+57,Ecole Polytechnique,59,France,Europe,259,649,924,3126
+58,Monash University,60,Australia,Oceania,1679,3204,20578,57433
+59,University of Washington,61,United States,North America,550,2484,8373,56973
+60,Shanghai Jiao Tong University,62,China,Asia,887,3544,2858,38931
+61,Osaka University,63,Japan,Asia,296,2814,2106,22760
+62,Technical University of Munich,64,Germany,Europe,1174,5850,6181,38726
+63,University of Glasgow,65,United Kingdom,Europe,956,2775,8149,23815
+64,Ludwig-Maximilians-Universität München,66,Germany,Europe,674,3274,5084,35055
+65,University of Texas at Austin,67,United States,North America,108,2833,4744,47995
+66,Ruprecht-Karls-Universität Heidelberg,68,Germany,Europe,756,3908,5298,28852
+67,University of Illinois at Urbana-Champaign,69,United States,North America,259,2554,9483,42427
+68,Georgia Institute of Technology,70,United States,North America,75,1133,4761,21082
+69,KU Leuven,71,Belgium,Europe,784,2515,6926,45538
+70,Pohang University of Science And Technology (POSTECH),71,South Korea,Asia,113,664,126,3117
+71,University of Copenhagen,73,Denmark,Europe,2336,7483,3683,32119
+72,University of Zurich,73,Switzerland,Europe,2617,4997,5036,26065
+73,Universidad de Buenos Aires (UBA),75,Argentina,Latin America,3165,16421,27109,122301
+74,National Taiwan University (NTU),76,Taiwan,Asia,220,2807,3152,32195
+75,Tohoku University,76,Japan,Asia,264,3411,1604,17827
+76,Durham University,78,United Kingdom,Europe,586,1539,4690,16745
+77,Lund University,78,Sweden,Europe,1002,3031,6408,27786
+78,"University of North Carolina, Chapel Hill",80,United States,North America,524,4083,1934,25373
+79,Boston University,81,United States,North America,379,3157,7041,25662
+80,The University of Auckland,82,New Zealand,Oceania,645,2047,8568,29641
+81,The University of Sheffield,82,United Kingdom,Europe,938,3065,8745,25430
+82,The University of Nottingham,84,United Kingdom,Europe,1135,3360,7993,29165
+83,University of Birmingham,84,United Kingdom,Europe,1028,2962,7795,28660
+84,The Ohio State University,86,United States,North America,1696,5911,6874,43156
+85,Zhejiang University,87,China,Asia,1913,4507,4625,40869
+86,"Trinity College Dublin, The University of Dublin",88,Ireland,Europe,544,1249,4311,14961
+87,Rice University,89,United States,North America,316,969,1847,6610
+88,Korea University,90,South Korea,Asia,339,3745,3638,25892
+89,University of Alberta,90,Canada,North America,1294,3561,8203,31765
+90,University of St Andrews,92,United Kingdom,Europe,485,1140,4030,8800
+91,Pennsylvania State University,93,United States,North America,211,3509,7081,45612
+92,The University of Western Australia,93,Australia,Oceania,809,1420,4575,18531
+93,Lomonosov Moscow State University,95,Russia,Europe,373,6709,5098,30233
+94,The Hong Kong Polytechnic University,95,Hong Kong,Asia,1275,2447,5251,20972
+95,University of Science and Technology of China,97,China,Asia,155,1992,548,16032
+96,KTH Royal Institute of Technology,98,Sweden,Europe,494,1500,1937,12658
+97,University of Geneva,98,Switzerland,Europe,1029,1752,6104,15844
+98,Washington University in St. Louis,100,United States,North America,784,2699,2706,13474
+99,University of Leeds,101,United Kingdom,Europe,870,3025,7534,29645
+100,University of Helsinki,102,Finland,Europe,535,2645,1234,22419
+101,University of Southampton,102,United Kingdom,Europe,1017,2820,7789,23775
+102,Eindhoven University of Technology,104,Netherlands,Europe,322,801,1275,7636
+103,Purdue University,105,United States,North America,1334,3247,8787,38143
+104,Yonsei University,106,South Korea,Asia,290,3621,3379,25903
+105,"KIT, Karlsruhe Institute of Technology",107,Germany,Europe,410,1827,4809,26081
+106,Sungkyunkwan University (SKKU),108,South Korea,Asia,324,3556,2818,23921
+107,Leiden University,109,Netherlands,Europe,581,2324,3488,26513
+108,The University of Adelaide,109,Australia,Oceania,633,1729,8114,21240
+109,Utrecht University,109,Netherlands,Europe,653,3067,2771,31754
+110,Uppsala University,112,Sweden,Europe,584,2567,5198,25371
+111,University of Groningen,113,Netherlands,Europe,1137,3351,10780,27549
+112,Nanjing University,114,China,Asia,617,2449,2960,32495
+113,Universiti Malaya (UM),114,Malaysia,Asia,655,2755,3476,17902
+114,Nagoya University,116,Japan,Asia,206,2665,1547,15838
+115,Technical University of Denmark,116,Denmark,Europe,966,2117,2098,8878
+116,"University of California, Davis",118,United States,North America,549,3843,4529,34244
+117,Aarhus University,119,Denmark,Europe,602,2316,3762,26226
+118,Humboldt-Universität zu Berlin,120,Germany,Europe,407,1966,4805,33198
+119,Universidade de São Paulo,121,Brazil,Latin America,279,5582,2086,65711
+120,Hokkaido University,122,Japan,Asia,210,2605,1347,17552
+121,Universidad Nacional Autónoma de México  (UNAM),122,Mexico,Latin America,949,15073,2173,141939
+122,Wageningen University,124,Netherlands,Europe,323,2277,3613,12695
+123,Freie Universitaet Berlin,125,Germany,Europe,305,1375,5735,32912
+124,Ghent University,125,Belgium,Europe,482,2520,3766,35968
+125,Queen Mary University of London,127,United Kingdom,Europe,801,1885,6806,16135
+126,Kyushu University,128,Japan,Asia,246,2858,1787,18660
+127,"University of Maryland, College Park",129,United States,North America,473,3920,4683,35504
+128,Université de Montréal ,130,Canada,North America,1037,2961,9688,39112
+129,Université Pierre et Marie Curie (UPMC),131,France,Europe,253,2273,4213,24305
+130,University of Southern California,132,United States,North America,551,3124,9170,38749
+131,Chalmers University of Technology,133,Sweden,Europe,336,1077,1465,9257
+132,"University of California, Santa Barbara (UCSB)",134,United States,North America,267,1449,2128,23149
+133,Lancaster University,135,United Kingdom,Europe,435,1245,4464,12300
+134,University of York,135,United Kingdom,Europe,636,1833,3364,15999
+135,Aalto University,137,Finland,Europe,370,1257,1831,12147
+136,Cardiff University,137,United Kingdom,Europe,705,2755,6090,24565
+137,Pontificia Universidad Católica de Chile (UC),137,Chile,Latin America,198,2260,991,27003
+138,McMaster University,140,Canada,North America,1170,3231,3548,23702
+139,RWTH Aachen University,141,Germany,Europe,449,3176,8556,44517
+140,University of Oslo,142,Norway,Europe,711,2509,3667,24304
+141,University of Pittsburgh,142,United States,North America,572,4982,2937,26393
+142,Technische Universität Berlin (TU Berlin),144,Germany,Europe,377,2562,4494,22176
+143,The Hebrew University of Jerusalem,145,Israel,Asia,454,2249,1034,16531
+144,University of Lausanne,146,Switzerland,Europe,1031,2173,3337,13435
+145,Emory University,147,United States,North America,484,2560,2154,12852
+146,Erasmus University Rotterdam,147,Netherlands,Europe,458,2011,5229,23273
+147,Michigan State University,149,United States,North America,653,2884,7427,44951
+148,University of Basel,149,Switzerland,Europe,684,1057,3441,12852
+149,University of Otago,151,New Zealand,Oceania,759,1266,3871,18532
+150,University of Waterloo,152,Canada,North America,473,1689,8962,35541
+151,Université catholique de Louvain (UCL),153,Belgium,Europe,406,1219,4468,24277
+152,University of Vienna,154,Austria,Europe,1400,3411,14468,45967
+153,Hanyang University,155,South Korea,Asia,364,3085,3397,23348
+154,Universitat de Barcelona,156,Spain,Europe,108,3863,6134,46002
+155,École Normale Supérieure de Lyon,157,France,Europe,91,382,221,2020
+156,University of Aberdeen,158,United Kingdom,Europe,508,1310,4246,12005
+157,The University of Exeter,158,United Kingdom,Europe,597,1756,5504,20749
+158,University of Bath,160,United Kingdom,Europe,440,1165,4213,14370
+159,National Tsing Hua University,161,Taiwan,Asia,119,1020,1187,13890
+160,Newcastle University,161,United Kingdom,Europe,835,2428,5717,21673
+161,University of Minnesota,163,United States,North America,195,4919,6542,59742
+162,Eberhard Karls Universität Tübingen,164,Germany,Europe,796,3844,3860,27366
+163,University of Bergen,164,Norway,Europe,484,1513,767,10671
+164,"University of California, Irvine",164,United States,North America,377,1926,8538,32151
+165,University of Bern,167,Switzerland,Europe,661,1172,1618,10758
+166,University College Dublin,168,Ireland,Europe,627,1604,3876,19833
+167,Dartmouth College,169,United States,North America,27,939,945,6224
+168,Politecnico di Milano,170,Italy,Europe,231,1500,5593,36277
+169,Albert-Ludwigs-Universitaet Freiburg,171,Germany,Europe,413,1966,3897,23214
+170,Indian Institute of Technology Delhi (IITD),172,India,Asia,4,466,80,7477
+171,King Fahd University of Petroleum & Minerals,173,Saudi Arabia,Asia,665,1062,989,6040
+172,University of Liverpool,173,United Kingdom,Europe,717,2390,7502,22065
+173,University of Virginia,173,United States,North America,487,2509,1899,21560
+174,University of Technology Sydney,176,Australia,Oceania,546,1328,7769,24207
+175,CentraleSupélec,177,France,Europe,137,529,1132,3877
+176,University of Florida,178,United States,North America,504,5419,4597,45485
+177,Indian Institute of Technology Bombay (IITB),179,India,Asia,19,876,93,9402
+178,University of Twente,179,Netherlands,Europe,299,910,2235,9332
+179,University of Göttingen,181,Germany,Europe,641,3678,3736,30402
+180,Vienna University of Technology,182,Austria,Europe,172,706,5199,17479
+181,Universidade Estadual de Campinas (Unicamp),182,Brazil,Latin America,109,1968,966,26572
+182,University of Colorado Boulder,182,United States,North America,566,3685,2679,30219
+183,Vrije Universiteit Brussel (VUB),182,Belgium,Europe,515,1792,1853,9284
+184,University of Rochester,186,United States,North America,488,2569,2805,9636
+185,Universidad Autónoma de Madrid,187,Spain,Europe,181,2738,2976,26511
+186,Alma Mater Studiorum - University of Bologna,188,Italy,Europe,153,2990,4195,63399
+187,University of Reading,188,United Kingdom,Europe,422,1280,4077,13330
+188,University of Cape Town,191,South Africa,Africa,379,1733,3325,19593
+189,Keio University CEMS MIM,192,Japan,Asia,261,3905,2178,33500
+190,Scuola Normale Superiore di Pisa,192,Italy,Europe,1,86,48,532
+191,Scuola Superiore Sant'Anna Pisa di Studi Universitari e di Perfezionamento,192,Italy,Europe,1,119,135,789
+192,Stockholm University,195,Sweden,Europe,646,2154,2636,28281
+193,Technische Universität Dresden,281,Germany,Europe,669,4913,4929,34029
+194,Texas A&M University,195,United States,North America,206,3446,4900,60294
+195,Universitat Autònoma de Barcelona,195,Spain,Europe,230,2187,3848,31986
+196,Instituto Tecnológico y de Estudios Superiores de Monterrey,199,Mexico,Latin America,821,1822,1412,13376
+197,Maastricht University ,200,Netherlands,Europe,502,1277,8234,16385
