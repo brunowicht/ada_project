@@ -1,23 +1,23 @@
 # Title
-Twitter reactions in Switzerland to major events.
+Reaction of the Swiss Twitter community to major events.
 
 # Abstract
-Social network are taking a very huge place on our lifes and a lot of people are commenting the actual events on their posts. However, it seems that one of the biggest one, Twitter isn't as used as Facebook or Instagram by swiss people (around 10 times more facebook accounts than twitter accounts in Switzerland). So with this project we would like to see if the swiss Twitter community is also doing posts on important events happening in Switzerland and in the whole world. The main goal is to be able to determine in which proportions we can learn from the swiss tweets what is happening in the world or in our country and how their author take a position on these facts. The story we want to tell is the evolution of tweets on important events between 2010 and 2016 and discover on what sort of events swiss people are tweeting the most. We are motivated by doing this project and telling this story because none of us is active on Twitter and we're interrested to have a look on what kind of tweets are posted in Switzerland.
+Social networks now have a huge importance in our lives and many people use them to comment about events that are happening around the globe. However, it seems that Twitter, one of the biggest player, isn't as used as Facebook or Instagram by Swiss people - There are about 10 times more Facebook accounts than Twitter accounts in Switzerland. With this project, we would like to see how the Swiss Twitter community reacts to important events happening in Switzerland or around the world. Our main goal is to determine to what extent and how well we can learn about what is happening in the world or in our country based on the Swiss tweets, and how their authors take a position on these events. The story we want to tell is the evolution of tweets during important events between 2010 and 2016 and discover what kind of events Swiss people are tweeting about the most. We are motivated to do this project and tell this story because none of us are active on Twitter and we're interested in understanding better how twitter is used in Switzerland.
 
 # Research questions
-How do swiss people react to internationnal events on twitter?
-How do swiss people react to local event on twitter?
+How do Swiss people react to international events on twitter?
+How do Swiss people react to local event on twitter?
 How do tweets reflect the reality? 
 
 # Dataset
-For this we will use the Swiss tweets dataset. We could use the date at which tweets have been posted and see if there are periods when the activity on twitter is higher than usually. We could also study the hashtags which are the most recurrent and bind them to an event (for instace #Rio2016, #JeSuisCharlie, #fukushima, ...). We could also make use of the geolocation for more local events.
+For this project, we will use the Swiss tweets dataset. We could try to see if there are periods when the activity on twitter is higher than usually and if so, link them to actual events. We could also do this by looking at the most recurrent hashtags in a certain period of time (for instance #Rio2016, #JeSuisCharlie, #fukushima, ...). Additionally, we could use geolocation to detect more local events.
 
 # A list of internal milestones up until project milestone 2
-- scrap all the data from the web and get the frequence of tweets per day/month/year.
-- find some important events on days with highest frequencies.
-- for some period of time (in a month, or in a day with high tweet frequency), get the most used hashtags, to maybe discover an event
-- for some known events, have a look if there were tweeted a lot or not.
+- Scrape all the data from the web and get the frequency of tweets per day/month/year.
+- Find some important events for which the twitter activity reaches a peak.
+- For some period of time (in a month, or in a day with high tweet frequency), get the most used hashtags, to maybe discover an event.
+- For some known events, quantify how much they were twitted about.
 - ...
 
-# Questions for TAa
-Where can we get the dataset? there is not information in the project datasets file.
+# Questions for TAs
+- Where can we get the dataset and what will it look like? There is no information in the project datasets file.
