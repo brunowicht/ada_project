@@ -10,7 +10,7 @@ Social networks now have a huge importance in our lives and many people use them
 - What trend with respect to time can be seen for the most popular events.
 
 ## Dataset
-For this project, we will use the Swiss tweets dataset, which contains 22 million tweets collected between 2010 and 2016 that were geolocated in Switzerland. We could try to see if there are periods when the activity on twitter is higher than usually and if so, link them to actual events. We could also do this by looking at the most recurrent hashtags in a certain period of time (for instance #Rio2016, #JeSuisCharlie, #fukushima, ...). Additionally, we could use geolocation to detect more local events.
+For this project, we will use the Swiss tweets dataset, which contains 22 million tweets collected between 2010-2016 and that were geolocated in Switzerland. We could try to see if there are periods when the activity on twitter is higher than usually and if so, link them to actual events. We could also do this by looking at the most recurrent hashtags in a certain period of time (for instance #Rio2016, #JeSuisCharlie, #fukushima, ...). Additionally, we could use geolocation to detect more local events.
 
 ## A list of internal milestones up until project milestone 3
 ### 1. Get familiar with the dataset 
@@ -20,12 +20,11 @@ For this project, we will use the Swiss tweets dataset, which contains 22 millio
 4. Detect potential problems with the dataset (missing values, formatting inconsistencies, ...)
 
 ### 2. Cleaning and pre-processing
-1. Extract a list of all the hashtags in the dataset
-2. For every hashtag, get the list of tweets in which it appears
-3. Aggregate the data obtained by date
+1. For every hashtag, get the list of tweets in which it appears
+2. Aggregate the data obtained by date
 
 ### 3. Data analysis and visualization
-1. Create visualizations to understand of how the popularity of a hashtag can change over time
+1. Create visualizations to understand how the popularity of a hashtag can change over time
 2. Create visualizations to understand how geographical location is linked with certain hashtags
 3. For some known hashtag linked to an event, vizualize its geographical repartition and popularity over time.
 
