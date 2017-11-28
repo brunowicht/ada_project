@@ -1,5 +1,5 @@
 # Reaction of the Swiss Twitter community to major events
-Our current pipeline can be found in the notebook [cleaning.ipynb](cleaning.ipynb).
+Our current pipeline can be found in the notebook [project.ipynb](project.ipynb).
 
 ## Abstract
 Social networks now have a huge importance in our lives and many people use them to comment about events that are happening around the globe. With this project, we would like to see how the Swiss Twitter community reacts to important events happening in Switzerland or around the world. Our main goal is to determine to what extent and how well we can learn about what is happening in the world or in our country based on the Swiss tweets. The story we want to tell is the evolution of tweets during important events between 2010 and 2016 and discover what kind of events Swiss people are tweeting about the most. We are motivated to do this project and tell this story because none of us are active on Twitter and we're interested in understanding better how twitter is used in Switzerland.
