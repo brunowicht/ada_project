@@ -1,9 +1,8 @@
 import pandas as pd
 import numpy as np
 import re
-import matplotlib.pyplot as plt
 import json
-
+import matplotlib.pyplot as plt
 
 def get_hashtags(text):
     """Returns the list of all hashtags (e.g. '#hashtag') present in the given text"""
@@ -58,10 +57,12 @@ def load_hashtag_list():
         unique_tags = json.load(infile)
     return unique_tags
 
+
 def search_hashtag(tag, df):
     return df[(df["tag"].str.contains(tag))]
 
 def plot_frequency_tags(df, col, tag, n):
     dfs = search_hashtag(tag, df)
-    dfs[col].value_counts()[:n].sort_index().plot.bar()
+    fig = plt.figure(figsize=(n/5,4))
+    fig = dfs[col].value_counts()[:n].sort_index().plot.bar()
     plt.show()
