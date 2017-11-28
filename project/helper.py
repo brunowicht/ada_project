@@ -21,6 +21,13 @@ def get_hashtags(text, lowercase=True):
         print(text)
         return list()
     
+def get_index_with_hashtag(df, hashtag):
+    """
+        Returns the indices of the tweets in which the given hashtag appears.
+    """
+    
+    return np.where(df.tag.apply(lambda x : hashtag in x))    
+
 def get_mentions(t):
     """Returns the list of all mentions (e.g. '@mention') present in the given text"""
     return re.findall(r"@\w+", t)
@@ -35,14 +42,14 @@ def add_lines_in_df(lines, dataframe):
     return pd.concat([dataframe, df2], ignore_index=True)
 
 
-def search_hashtag(tag, df):
-    """Returns the elements that contain the given hashtag in the given database"""
-    return df[(df["tag"].str.contains(tag))]
+def search_hashtag(hashtag, df):
+    """Filter the given dataset to keep only elements that contain the given hashtag"""
+    return df[(df["tag"].str.contains(hashtag))]
 
-def plot_frequency_tags(df, col, tag, n):
+def plot_frequency_tags(df, col, hashtag, n):
     """Display a bar plot of the number of tweets with the given hashtag per day, month or year.
        The bar plot contains the 'n' days/months/years that have the most tweets about the hashtag, in chronological order."""
-    dfs = search_hashtag(tag, df)
+    dfs = search_hashtag(hashtag, df)
     fig = plt.figure(figsize=(n/5,4))
     fig = dfs[col].value_counts()[:n].sort_index().plot.bar()
     plt.show()
