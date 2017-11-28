@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import re
+import matplotlib.pyplot as plt
+import json
+
 
 def get_hashtags(text):
     """Returns the list of all hashtags (e.g. '#hashtag') present in the given text"""
@@ -10,6 +13,15 @@ def get_hashtags(text):
     except:
         print(text)
         return list()
+    
+def get_hashtags_without_lower(text):
+    """Returns the list of all hashtags (e.g. '#hashtag') present in the given text"""
+    try:
+        return re.findall(r"#\w+", text)
+    except:
+        print(text)
+        return list()
+    
     
 def get_mentions(t):
     """Returns the list of all mentions (e.g. '@mention') present in the given text"""
@@ -28,7 +40,7 @@ def add_lines_in_df(lines, dataframe):
 def compute_hashtag_list(df):
     """Compute the list of different hashtags and return it"""
     
-    concat_list = np.concatenate(df.tag.apply(lambda x : np.array(get_hashtags(x))))
+    concat_list = np.concatenate(df.tag.apply(lambda x : np.array(get_hashtags_without_lower(x))))
     unique_tags = np.unique(concat_list)
     return unique_tags
     
@@ -45,3 +57,11 @@ def load_hashtag_list():
     with open('../../twitter_dataset/unique_hashtags.json', 'r') as infile:
         unique_tags = json.load(infile)
     return unique_tags
+
+def search_hashtag(tag, df):
+    return df[(df["tag"].str.contains(tag))]
+
+def plot_frequency_tags(df, col, tag, n):
+    dfs = search_hashtag(tag, df)
+    dfs[col].value_counts()[:n].sort_index().plot.bar()
+    plt.show()
