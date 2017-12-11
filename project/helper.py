@@ -42,9 +42,9 @@ def add_lines_in_df(lines, dataframe):
     return pd.concat([dataframe, df2], ignore_index=True)
 
 
-def search_hashtag(hashtag, df):
+def search_hashtag(hashtag, df, group_hashtags):
     """Filter the given dataset to keep only elements that contain the given hashtag"""
-    return df[(df["tag"].str.contains(hashtag))]
+    return df.iloc[group_hashtags.loc[hashtag].tweets_idx]
 
 def plot_frequency_tags(df, col, hashtag, n):
     """Display a bar plot of the number of tweets with the given hashtag per day, month or year.
