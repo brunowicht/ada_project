@@ -46,10 +46,10 @@ def search_hashtag(hashtag, df, group_hashtags):
     """Filter the given dataset to keep only elements that contain the given hashtag"""
     return df.iloc[group_hashtags.loc[hashtag].tweets_idx]
 
-def plot_frequency_tags(df, col, hashtag, n):
+def plot_frequency_tags(df, col, hashtag, n, group_tags):
     """Display a bar plot of the number of tweets with the given hashtag per day, month or year.
        The bar plot contains the 'n' days/months/years that have the most tweets about the hashtag, in chronological order."""
-    dfs = search_hashtag(hashtag, df)
+    dfs = search_hashtag(hashtag, df, group_tags)
     fig = plt.figure(figsize=(n/5,4))
     fig = dfs[col].value_counts()[:n].sort_index().plot.bar()
     plt.show()
