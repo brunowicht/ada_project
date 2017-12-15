@@ -69,6 +69,8 @@ After the hashtag extraction, we only keep the tweets with at least one hashtag.
 
 \section{Data Manipulation}
 
+In order to implement event detection efficiently, we need to compute a dictionary containing for each hashtags the ids of each post that contains it. This is done in the function \texttt{group\_by\_hashtag(...)}. This function iterates over every post in the database and adds the id of the post in the dictionary entry of the hashtag. In this method, we also compute the number of unique authors for this hashtag. With this value, we can easily filter out hashtags if they only concern few posters.
+
 \subsection{Grouping by hashtag}
 
 \section{Data analysis and visualization}

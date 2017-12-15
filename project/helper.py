@@ -18,7 +18,6 @@ def get_hashtags(text, lowercase=True):
         else:
             return res
     except:
-        print(text)
         return list()
     
 def get_index_with_hashtag(df, hashtag):
@@ -27,10 +26,6 @@ def get_index_with_hashtag(df, hashtag):
     """
     
     return np.where(df.tag.apply(lambda x : hashtag in x))    
-
-def get_mentions(t):
-    """Returns the list of all mentions (e.g. '@mention') present in the given text"""
-    return re.findall(r"@\w+", t)
 
 def add_lines_in_df(lines, dataframe):
     df2 =  pd.DataFrame(lines)
