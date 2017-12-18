@@ -10,20 +10,25 @@ from folium.plugins import MarkerCluster
 from const import *
 
 
-def popup_html(row):
-    """Return the html to create a popup for the dataframe row.
+def popup_html(text_line_1, text_line_2):
+    """Return the html to create 2-lines popup to be used in maps.
     """
     return """
     <style>
     h3 {
         color: black;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
     }
     </style>
     <h3> %s </h3>
     <h3> %s </h3>
-    """ %( row.day, str(row.tag.replace("'", "").replace("[", "").replace("]", "")) )
+    """ %( text_line_1, text_line_2 )
+
+def popup_df_row(row):
+    """Return the html to create a popup for the dataframe row.
+    """
+    return popup_html(row.day, str(row.tag.replace("'", "").replace("[", "").replace("]", "")))
 
 def add_markers_to_map_(dataframe, map_, popup = True, maxClusterRadius = 10):
     """Add the clusters of markers from the dataframe to the given map. 
@@ -34,7 +39,7 @@ def add_markers_to_map_(dataframe, map_, popup = True, maxClusterRadius = 10):
         if row.Latitude != '\\N' and row.Longitude != '\\N':
             coordinates.append([float(row.Longitude), float(row.Latitude)])
             if popup:
-                popups.append(folium.Popup(popup_html(row)))
+                popups.append(folium.Popup(popup_df_row(row)))
             else:
                 popups.append("")
             
@@ -45,7 +50,7 @@ def get_map_with_hasthtag(hashtag, df_tag, group_hashtags, dates=None):
     """Create a map with the markers for the given hashtag and (optionally) at the given dates.
     """
     swiss_coord = [46.8, 8.2]
-    swiss_map = folium.Map(swiss_coord, zoom_start=8)
+    swiss_map = folium.Map(SWISS_COORD, zoom_start=8)
     
     # Get the dataframe of the tweet containing the hashtag.
     indexes = group_hashtags.loc[hashtag]
@@ -58,4 +63,17 @@ def get_map_with_hasthtag(hashtag, df_tag, group_hashtags, dates=None):
     
     add_markers_to_map_(event_df_tag, swiss_map)
 
-    return swiss_map    
+    return swiss_map
+
+def get_events_map(events_locations, event_dic):
+    swiss_map = folium.Map(SWISS_COORD, zoom_start=8)
+    
+    coordinates = []
+    popups = []
+    for hashtag, location in events_locations.items():
+        coordinates.append(location)
+        popups.append(folium.Popup(popup_html(hashtag, ', '.join(event_dic[hashtag]))))
+        
+    MarkerCluster(locations=coordinates, popups=popups).add_to(swiss_map)
+    
+    return swiss_map

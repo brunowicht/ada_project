@@ -67,8 +67,9 @@ def get_event_location(hashtag, dates, df_tag, group_hashtags, event_df=None):
     
     return (event_location, mean_deviation)
 
-def get_events_locations(event_dic, df_tag, group_hashtags, std_threshold=0.25, min_loc_nb=10):
+def get_events_locations(event_dic, df_tag, group_hashtags, std_threshold=0.25, min_loc_nb=10, return_mean_std=False):
     """Compute the location of the detected events.
+    Returns the location of each event, and the mean deviation as well if return_mean_std is True.
     It keeps only event locations for which the mean standard deviation is below std_threshold,
     and the number of tweet locations is at least min_loc_nb.
     """
@@ -83,9 +84,14 @@ def get_events_locations(event_dic, df_tag, group_hashtags, std_threshold=0.25, 
         # Compute the location only if we have a minimum of min_tweet_nb valid locations
         if loc_nb >= min_loc_nb:
             location_deviation = get_event_location(hashtag, dates, df_tag, group_hashtags, event_df=event_df)
-
+            
             if location_deviation[1] < std_threshold:
-                event_locations[hashtag] = location_deviation
+                if return_mean_std:
+                    # Save the location and mean deviation
+                    event_locations[hashtag] = location_deviation
+                else:
+                    # Save only the location
+                    event_locations[hashtag] = location_deviation[0]
         
         sys.stdout.write("\r{0:.2f}%".format((float(tag_idx+1)/nb_tags)*100))
         sys.stdout.flush()
