@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  19 DEC 2017 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  19 DEC 2017 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -373,52 +373,56 @@ File: figures/freq_month_eurovision.png Graphic file (type png)
 Package pdftex.def Info: figures/freq_month_eurovision.png used on input line 8
 7.
 (pdftex.def)             Requested size: 219.08612pt x 161.61009pt.
- [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+<figures/map_eurovision.png, id=83, 978.65625pt x 587.19376pt>
+File: figures/map_eurovision.png Graphic file (type png)
+
+<use figures/map_eurovision.png>
+Package pdftex.def Info: figures/map_eurovision.png used on input line 100.
+(pdftex.def)             Requested size: 219.08612pt x 131.44986pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]\OT1/ptm/m/n/10.95 Figure 2: []Map with ev-ery tweet for
+ []
+
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
  <./figures/freq_month_eurovision.png>]
-<figures/map_eurovision.png, id=94, 978.65625pt x 587.19376pt>
-File: figures/map_eurovision.png Graphic file (type png)
-
-<use figures/map_eurovision.png>
-Package pdftex.def Info: figures/map_eurovision.png used on input line 103.
-(pdftex.def)             Requested size: 219.08612pt x 131.44986pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
-[]\OT1/ptm/m/n/10.95 Figure 2: []Map with ev-ery tweet for
- []
-
 <figures/map_paleo.png, id=95, 978.65625pt x 587.19376pt>
 File: figures/map_paleo.png Graphic file (type png)
 
 <use figures/map_paleo.png>
-Package pdftex.def Info: figures/map_paleo.png used on input line 112.
+Package pdftex.def Info: figures/map_paleo.png used on input line 109.
 (pdftex.def)             Requested size: 219.08612pt x 131.44986pt.
 
 <figures/tweets_years.png, id=99, 419.5675pt x 266.9975pt>
 File: figures/tweets_years.png Graphic file (type png)
 
 <use figures/tweets_years.png>
-Package pdftex.def Info: figures/tweets_years.png used on input line 138.
+Package pdftex.def Info: figures/tweets_years.png used on input line 136.
 (pdftex.def)             Requested size: 219.08612pt x 139.418pt.
- [2 <./figures/map_eurovision.png (PNG copy)> <./figures/map_paleo.png (PNG cop
-y)> <./figures/tweets_years.png>]
-<figures/freq_event_type1.png, id=108, 517.935pt x 314.17375pt>
+
+<figures/freq_event_type1.png, id=100, 517.935pt x 314.17375pt>
 File: figures/freq_event_type1.png Graphic file (type png)
 
 <use figures/freq_event_type1.png>
-Package pdftex.def Info: figures/freq_event_type1.png used on input line 149.
+Package pdftex.def Info: figures/freq_event_type1.png used on input line 147.
 (pdftex.def)             Requested size: 219.08612pt x 132.89647pt.
 
-<figures/freq_event_type2.png, id=109, 510.90875pt x 314.17375pt>
+<figures/freq_event_type2.png, id=101, 510.90875pt x 314.17375pt>
 File: figures/freq_event_type2.png Graphic file (type png)
 
 <use figures/freq_event_type2.png>
-Package pdftex.def Info: figures/freq_event_type2.png used on input line 158.
+Package pdftex.def Info: figures/freq_event_type2.png used on input line 156.
 (pdftex.def)             Requested size: 219.08612pt x 134.72295pt.
 
-Underfull \hbox (badness 1874) in paragraph at lines 182--183
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [2 <./figures/map_eurovision.png (PNG copy)> <./figures/map_paleo.png (PNG cop
+y)> <./figures/tweets_years.png>]
+Underfull \hbox (badness 1874) in paragraph at lines 180--181
 []\OT1/ptm/m/n/10.95 The ker-nel for the weighted lo-cal av-er-age
  []
 
@@ -427,7 +431,7 @@ Underfull \hbox (badness 1874) in paragraph at lines 182--183
 File: figures/christmas_result.png Graphic file (type png)
 
 <use figures/christmas_result.png>
-Package pdftex.def Info: figures/christmas_result.png used on input line 216.
+Package pdftex.def Info: figures/christmas_result.png used on input line 212.
 (pdftex.def)             Requested size: 219.08612pt x 132.12465pt.
 
 <figures/jesuischarlie_result.png, id=130, 519.9425pt x 313.17pt>
@@ -435,35 +439,35 @@ File: figures/jesuischarlie_result.png Graphic file (type png)
 
 <use figures/jesuischarlie_result.png>
 Package pdftex.def Info: figures/jesuischarlie_result.png used on input line 22
-5.
+1.
 (pdftex.def)             Requested size: 219.08612pt x 131.95578pt.
 
 <figures/local_event_map.png, id=132, 962.59625pt x 577.15625pt>
 File: figures/local_event_map.png Graphic file (type png)
 
 <use figures/local_event_map.png>
-Package pdftex.def Info: figures/local_event_map.png used on input line 237.
+Package pdftex.def Info: figures/local_event_map.png used on input line 233.
 (pdftex.def)             Requested size: 219.08612pt x 131.35168pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
  [4 <./figures/christmas_result.png> <./figures/jesuischarlie_result.png> <./fi
 gures/local_event_map.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
 
 (./ada2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `ada2017.out' has not changed.
 (rerunfilecheck)             Checksum: 5481BB6FA82115B55621F16523070E23;1277.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
  6461 strings out of 493014
  96668 string characters out of 6133351
- 189166 words of memory out of 5000000
+ 189173 words of memory out of 5000000
  9885 multiletter control sequences out of 15000+600000
  19819 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,9n,28p,985b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,9n,28p,768b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -478,7 +482,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on ada2017.pdf (4 pages, 3156468 bytes).
+Output written on ada2017.pdf (4 pages, 3156204 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams

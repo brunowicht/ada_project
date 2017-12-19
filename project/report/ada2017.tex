@@ -90,10 +90,7 @@ This section covers how we visualize our data and allow us to get a feel on how 
   \label{fig:freq_month_eurovision}
 \end{figure}
 
-With frequency visualisation, we can visualize spikes in the number of tweets. The method \texttt{plot\_frequency\_tags(...)} computes for a given hashtag the numbers of tweets per frequency that contain this hashtag. Here we can chose frequency as either day, month or year. Then it takes the \texttt{n} most tweeted dates and displays them in chronological order with a bar plot. We only take the \texttt{n} most tweeted dates because it provides the most compact visualisation. Note however that these plot are not homogenous in time. 
-
-Now, let us look a the frequency plot \ref{fig:freq_month_eurovision} for \texttt{\#eurovision} .
-We can very clearly see an increase in the number of tweet during the month of may of each years. Since eurovision takes place in may, it is obvious that people will more likely talk about it during it's happening. We will be using this knowledge to develop an algorithm to detect those sudden spikes.
+Before starting the event detection part, it is important to get a feel of how the number of tweets typically varies for some given hashtag. In Figure \ref{fig:freq_month_eurovision}, we see a plot of the top 30 months that had the highest number of tweets with the hashtag \texttt{\#eurovision}. Note that this plot doesn't necessarily contain consecutive months, but only the more important ones, in chronological order. We can very clearly see an increase in the number of tweets during the month of May of each year. Indeed, the Eurovision contest takes place during that month, and it is obvious that people talk more about it while it is happening. We will be using this knowledge to develop an algorithm to detect those sudden spikes.
 
 \subsection{Visualizing event localisation}
 
@@ -115,8 +112,9 @@ We can very clearly see an increase in the number of tweet during the month of m
   \label{fig:map_paleo}
 \end{figure}
 
-The map are displayed in order to get an intuition on the geographic repartitions of tweets. The map are created using folium. We use a MarkerCluster to group every tweet close in space. Other than that, it is a pretty straightforward folium map. Now, look at the first map\ref{fig:map_eurovision}. We see that the distribution is regrouped in the cities but overall it is quite uniform if we consider the population density. On the other side, in the second map \ref{fig:map_paleo}, we see that most of the tweets are located in Nyon, which is indeed where this music festival takes place. The logic here people close to the actual event are much more likely to talk about it. Whereas international event are known in switzerland as a whole. Hence a local events lead to tweet localisation around the position of the event and international events have a spread tweet geographic distribution. We will use this knowledge to find the type of an event.
+The map are created using folium and are displayed in order to get an intuition on the geographic repartitions of tweets. We use a MarkerCluster to group every tweet close in space. 
 
+In the map shown in Figure \ref{fig:map_eurovision}, we see that they are more tweets in the cities but overall the distribution is quite uniform if we consider the population density. On the other hand, in the map shown in Figure \ref{fig:map_paleo}, we see that most of the tweets are located in Nyon, which is indeed where the Paleo music festival takes place. Hence, we can see that local events lead to a concentration of tweets around the position of the event, whereas international events have a much more uniform geographic tweet distribution. We will use this knowledge to find the type of an event, and estimate its location in case of a local event.
 
 \section{Event detection}
 
@@ -207,15 +205,13 @@ Here are some statistics to quantify our results:
 \end{itemize}
 
 \subsection{Event Detection}
-We correctly detected the events we took as example previously, mainly \#jesuischarlie and \#christmas, as we can see in Figure \ref{fig:christmas} and \ref{fig:jesuischarlie}. Actually, for \#christmas, we detected events on the 24th and 25th of every year between 2012-2015, which is quite good (Note that december 2016 was not included in our dataset).
-
-And more generally, by looking at the events we detected, we can recognise a lot of them as real events. We indeed detect events such as music festivals, conferences, art exhibitions, sporting events, holidays, and much more.
+We correctly detected the events we took as example previously, mainly \texttt{\#jesuischarlie} and \texttt{\#christmas}, as we can see in Figure \ref{fig:christmas} and \ref{fig:jesuischarlie}. Actually, for \texttt{\#christmas}, we detected events on the 24th and 25th of every year between 2012-2015, which is quite good (Note that december 2016 was not included in our dataset).
 \begin{figure}[htbp]
   \vspace*{-1mm}
   \centering
   \includegraphics[width=\columnwidth]{figures/christmas_result.png}
   \vspace{-5mm}
-  \caption{Computed event score (in red) for the event \#chrismas}
+  \caption{Computed event score (in red) for the event \texttt{\#christmas}}
   \label{fig:christmas}
 \end{figure}
 
@@ -224,7 +220,7 @@ And more generally, by looking at the events we detected, we can recognise a lot
   \centering
   \includegraphics[width=\columnwidth]{figures/jesuischarlie_result.png}
   \vspace{-5mm}
-  \caption{Computed event score (in red) for the event \#jesuischarlie}
+  \caption{Computed event score (in red) for the event \texttt{\#jesuischarlie}}
   \label{fig:jesuischarlie}
 \end{figure}
 
@@ -241,7 +237,7 @@ A map containing all 440 events for which a location was found is shown in Figur
 \end{figure}
 
 \section{Conclusion}
-
+To conclude, we have implemented an event detection algorithm, that has shown to detect many events and produce good results. Moreover, we have managed to estimate the location of the events for which the tweets were very localized.
 
 
 \end{document}
