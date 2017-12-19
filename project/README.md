@@ -1,8 +1,12 @@
-# Reaction of the Swiss Twitter community to major events
-Our current pipeline can be found in the notebook [project.ipynb](project.ipynb).
+# Event detection on a Twitter dataset
+[**View notebook in NbViewer**](https://nbviewer.jupyter.org/github/brunowicht/ada_project/blob/master/project/project.ipynb)
+
+Project notebook: [project.ipynb](project.ipynb)
+
+Project report: [ada2017.pdf](report/ada2017.pdf)
 
 ## Abstract
-Social networks now have a huge importance in our lives and many people use them to comment about events that are happening around the globe. With this project, we would like to see how the Swiss Twitter community reacts to important events happening in Switzerland or around the world. Our main goal is to determine to what extent and how well we can learn about what is happening in the world or in our country based on the Swiss tweets. The story we want to tell is the evolution of tweets during important events between 2010 and 2016 and discover what kind of events Swiss people are tweeting about the most. We are motivated to do this project and tell this story because none of us are active on Twitter and we're interested in understanding better how twitter is used in Switzerland.
+Social networks are widely used to discuss real-life regional and international events. In this project, we describe a way to hashtag-based event detection and localization from a dataset of tweets geolocated in Switzerland. The method proposed is effective for major incidents and popular festivities, and is suitable for events lasting one or multiple days. Our  procedure detected a total of 7082 distinct events and found 440 meaningful local events locations.
 
 ## Research questions
 - How can we accurately detect events and label them based on tweets posted by Swiss users.
@@ -10,31 +14,11 @@ Social networks now have a huge importance in our lives and many people use them
 - What trend with respect to time can be seen for the most popular events.
 
 ## Dataset
-For this project, we will use the Swiss tweets dataset, which contains 22 million tweets collected between 2010-2016 and that were geolocated in Switzerland. We could try to see if there are periods when the activity on twitter is higher than usually and if so, link them to actual events. We could also do this by looking at the most recurrent hashtags in a certain period of time (for instance #Rio2016, #JeSuisCharlie, #fukushima, ...). Additionally, we could use geolocation to detect more local events.
-
-## A list of internal milestones up until project milestone 3
-### 1. Get familiar with the dataset 
-1. Learn how to access the dataset, easily process it and deal with its size
-2. Understand what specific field the dataset contains, and how it is structured
-3. Determine which fields are useful and which aren't
-4. Detect potential problems with the dataset (missing values, formatting inconsistencies, ...)
-
-### 2. Cleaning and pre-processing
-1. For every hashtag, get the list of tweets in which it appears
-2. Aggregate the data obtained by date
-
-### 3. Data analysis and visualization
-1. Create visualizations to understand how the popularity of a hashtag can change over time
-2. Create visualizations to understand how geographical location is linked with certain hashtags
-3. For some known hashtag linked to an event, vizualize its geographical repartition and popularity over time.
-
-### 4. Event detection
-1. Find a way to differentiate hashtags linked to events from ever-popular ones.
-2. Create a basic algorithm for event detection using hashtag popularity and test its performance
-3. Optimize the algorithm based on the results (e.g. give less importance to events with high frequency, use the userId to discriminate against events that were only tweeted by a few people, use geolocation to fine tune the algorithm, ...)
-4. Find a way to approximate the geolocation of an event based on the tweets about that event
+For this project, we will use the Swiss tweets dataset, which contains 22 million tweets collected between 2010-2016 and that were geolocated in Switzerland.
 
 ## Member contributions
-1. Bruno: Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
-2. Davide: Grouping data by hashtag, report writing, map visualisation, getting unique authors per days. Data cleaning and preprocessing.
-3. Tanguy: Event detection, report writing, frequency plot and map visualisation, event localisation, ...
+**Bruno:** Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
+
+**Davide:** Grouping data by hashtag, report writing, map visualisation, getting unique authors per days. Data cleaning and preprocessing.
+
+**Tanguy:** Event detection algorithm idea and implementation, event localisation, report writing, frequency plot and map visualisation.
