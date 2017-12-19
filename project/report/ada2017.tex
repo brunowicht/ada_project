@@ -48,7 +48,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-  Social networks are widely used to exchange regional and international information. This data is used to detect events dates and position using a moving average on the twitter hashtags. This method is effective for major incidents and popular festivities. Our  procedure found a total of 7082 distinct events and detect local events for 440 events with meaningful location. A map is proposed to visualize detected local events in Switzerland.
+  Social networks are widely used to exchange regional and international information. This data is used to detect events dates and position using a moving average on the twitter hashtags. This method is effective for major incidents and popular festivities. Our  procedure found a total of 7082 distinct events and detect 440 meaningful local events locations. A map is proposed to visualize detected events in Switzerland.
 \end{abstract}
 
 
@@ -86,13 +86,13 @@ This section covers how we visualize our data and allow us to get a feel on how 
   \centering
   \includegraphics[width=\columnwidth]{figures/freq_month_eurovision.png}
   \vspace{-5mm}
-  \caption{For the top months, plot the number of tweets with  \#eurovision}
+  \caption{For the top months, plot the number of tweets with  \texttt{\#eurovision}}
   \label{fig:freq_month_eurovision}
 \end{figure}
 
 With frequency visualisation, we can visualize spikes in the number of tweets. The method \texttt{plot\_frequency\_tags(...)} computes for a given hashtag the numbers of tweets per frequency that contain this hashtag. Here we can chose frequency as either day, month or year. Then it takes the \texttt{n} most tweeted dates and displays them in chronological order with a bar plot. We only take the \texttt{n} most tweeted dates because it provides the most compact visualisation. Note however that these plot are not homogenous in time. 
 
-Now, let us look a the frequency plot \ref{fig:freq_month_eurovision} for \#eurovision.
+Now, let us look a the frequency plot \ref{fig:freq_month_eurovision} for \texttt{\#eurovision} .
 We can very clearly see an increase in the number of tweet during the month of may of each years. Since eurovision takes place in may, it is obvious that people will more likely talk about it during it's happening. We will be using this knowledge to develop an algorithm to detect those sudden spikes.
 
 \subsection{Visualizing event localisation}
@@ -102,7 +102,7 @@ We can very clearly see an increase in the number of tweet during the month of m
   \centering
   \includegraphics[width=\columnwidth]{figures/map_eurovision.png}
   \vspace{-5mm}
-  \caption{Map with every tweet for \#eurovision}
+  \caption{Map with every tweet for \texttt{\#eurovision}}
   \label{fig:map_eurovision}
 \end{figure}
 
@@ -111,7 +111,7 @@ We can very clearly see an increase in the number of tweet during the month of m
   \centering
   \includegraphics[width=\columnwidth]{figures/map_paleo.png}
   \vspace{-5mm}
-  \caption{Map with every tweet for \#paleo}
+  \caption{Map with every tweet for \texttt{\#paleo}}
   \label{fig:map_paleo}
 \end{figure}
 
@@ -206,27 +206,9 @@ Here are some statistics to quantify our results:
   \item Out of these 7028 events, we found a relevant location for 440 of them.
 \end{itemize}
 
-We correctly detected the events we took as example previously, mainly \#jesuischarlie and \#christmas, as we can see in Figure \ref{fig:christmas} and \ref{fig:jesuischarlie}. Actually, for \#christmas, we detected events on the 24th and 25th of every year between 2012-2015, which is quite good (Note that december 2016 was not included in our dataset).
+We correctly detected the events we took as example previously, mainly \#jesuischarlie and \#christmas, as we can see in Figure . Actually, for \#christmas, we detected events on the 24th and 25th of every year between 2012-2015, which is quite good (Note that december 2016 was not included in our dataset).
 
-And more generally, by looking at the events we detected, we can recognise a lot of them as real events. We indeed detect big events such as Baselworld, 
 
-\begin{figure}[htbp]
-  \vspace*{-1mm}
-  \centering
-  \includegraphics[width=\columnwidth]{figures/christmas_result.png}
-  \vspace{-5mm}
-  \caption{Computed event score (in red) for the event \#chrismas}
-  \label{fig:christmas}
-\end{figure}
-
-\begin{figure}[htbp]
-  \vspace*{-1mm}
-  \centering
-  \includegraphics[width=\columnwidth]{figures/jesuischarlie_result.png}
-  \vspace{-5mm}
-  \caption{Computed event score (in red) for the event \#jesuischarlie}
-  \label{fig:jesuischarlie}
-\end{figure}
 
 
 
