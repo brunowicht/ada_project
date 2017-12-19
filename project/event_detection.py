@@ -65,3 +65,29 @@ def group_events_by_date(event_dic, max_days_diff=2):
         grouped_event_dic[hashtag] = group_days_list(days, max_days_diff)
         
     return grouped_event_dic
+
+def get_unique_author_per_frequency(df, frequency, df_tag):
+    """
+        Returns a dictionnary containing for each hashtags a dictionnary of dates
+        and the corresponding number of user that has tweeted this hashtag frequency.
+        
+        df: group_df_filtered
+        frequency: one of the following values : {"day", "month", "year"}
+    """
+    
+    print('Computing dictionnary...')
+    dic_tag_days = {}
+    nb_tags = df.shape[0]
+    row_nb = 0
+    
+    for tag, row in df.iterrows():
+        row_nb = row_nb + 1
+        grouped_day = df_tag.iloc[row['tweets_idx']]
+
+        grouped_day = grouped_day.drop_duplicates(["userId", frequency], "first")
+        dic_tag_days[tag] = grouped_day[frequency].value_counts()
+        
+        sys.stdout.write("\r{0:.2f}%".format((float(row_nb)/nb_tags)*100))
+        sys.stdout.flush()
+    
+    return dic_tag_days
