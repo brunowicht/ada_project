@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  18 DEC 2017 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  19 DEC 2017 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -315,39 +315,45 @@ Package pdftex.def Info: figures/map_paleo.png used on input line 116.
 LaTeX Warning: Reference `fig:freq_day_paleo' on page 2 undefined on input line
  122.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
 [2 <./figures/map_eurovision.png (PNG copy)> <./figures/map_paleo.png (PNG copy
 )>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
  (./ada2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
-Package rerunfilecheck Info: File `ada2017.out' has not changed.
-(rerunfilecheck)             Checksum: 63B7EF017DCF8326803EC53C315D9D75;531.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 
+
+Package rerunfilecheck Warning: File `ada2017.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ada2017.out':
+(rerunfilecheck)             Before: 2ACFFB93918F01DEB197EFF3B55DA8F1;538
+(rerunfilecheck)             After:  816F4DE8FEED3E80EF09632F71469B50;681.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 5259 strings out of 493014
- 78875 string characters out of 6133351
+ 5262 strings out of 493014
+ 78902 string characters out of 6133351
  164395 words of memory out of 5000000
  8733 multiletter control sequences out of 15000+600000
  19027 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,9n,28p,1002b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,28p,985b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on ada2017.pdf (2 pages, 2060215 bytes).
+Output written on ada2017.pdf (2 pages, 2060594 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
