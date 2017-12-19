@@ -17,8 +17,13 @@ Social networks are widely used to discuss real-life regional and international 
 For this project, we will use the Swiss tweets dataset, which contains 22 million tweets collected between 2010-2016 and that were geolocated in Switzerland.
 
 ## Member contributions
-**Bruno:** Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
+- **Bruno:** Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
 
-**Davide:** Grouping data by hashtag, report writing, map visualisation, getting unique authors per days. Data cleaning and preprocessing.
+- **Davide:** Grouping data by hashtag, report writing, map visualisation, getting unique authors per days. Data cleaning and preprocessing.
 
-**Tanguy:** Event detection algorithm idea and implementation, event localisation, report writing, frequency plot and map visualisation.
+- **Tanguy:** Event detection algorithm idea and implementation, event localisation, report writing, frequency plot and map visualisation.
+
+**Final Presentation:**
+- Bruno: Main poster idea and structure
+- Davide: Poster design
+- Tanguy: Speech, poster design
