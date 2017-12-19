@@ -173,8 +173,8 @@ $$ K = \big[ w_{ \floor{ -\frac{M}{2} } }  \dots w_{0}  \dots  w_{ \floor{ \frac
 then, the event score at day $d$ is obtained by :
 
 $$ 
-event\_score(d) =  \frac {\sum_{i=-\frac{M}{2}}^{\frac{M}{2}} w_i * U_{d + i} }
-				    {\frac{1}{N} \sum_{j=-\frac{N}{2}}^{\frac{N}{2}}  U_{d + j} }
+event\_score(d) =  \frac {\sum_{i=- \floor{ \frac{M}{2}}}^{ \floor{ \frac{M}{2}}} w_i * U_{d + i} }
+				    {\frac{1}{N} \sum_{j=- \floor{ \frac{N}{2}}}^{ \floor{ \frac{N}{2}}}  U_{d + j} }
 $$
 
 The kernel for the weighted local average should be some kind of gaussian, so that the maximum weight is for day $d$. The aim of this local weighted average is to better detect anticipated events, or events lasting a few days. This was implemented to address the second challenge mentioned earlier. 
