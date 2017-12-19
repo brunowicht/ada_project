@@ -1,5 +1,5 @@
 \BOOKMARK [1][-]{section.1}{Credits}{}% 1
-\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.2}{Dataset Description}{}% 2
 \BOOKMARK [1][-]{section.3}{Pre-processing}{}% 3
 \BOOKMARK [1][-]{section.4}{Data Manipulation}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{Grouping by hashtag}{section.4}% 5
@@ -8,3 +8,6 @@
 \BOOKMARK [2][-]{subsection.5.2}{Visualizing event localisation}{section.5}% 8
 \BOOKMARK [1][-]{section.6}{Event detection}{}% 9
 \BOOKMARK [2][-]{subsection.6.1}{Filtering out irrelevant hashtags}{section.6}% 10
+\BOOKMARK [1][-]{section.7}{Event Localization}{}% 11
+\BOOKMARK [1][-]{section.8}{Results}{}% 12
+\BOOKMARK [1][-]{section.9}{Conclusion}{}% 13

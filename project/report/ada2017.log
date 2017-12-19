@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.4)  19 DEC 2017 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.4)  19 DEC 2017 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,7 +282,7 @@ Underfull \hbox (badness 3989) in paragraph at lines 79--80
 \OT1/ptm/m/n/10.95 In or-der to im-ple-ment event de-tec-tion ef-fi-
  []
 
-<figures/freq_month_eurovision.png, id=40, 386.44376pt x 285.065pt>
+<figures/freq_month_eurovision.png, id=56, 386.44376pt x 285.065pt>
 File: figures/freq_month_eurovision.png Graphic file (type png)
 
 <use figures/freq_month_eurovision.png>
@@ -294,7 +294,7 @@ Package pdftex.def Info: figures/freq_month_eurovision.png used on input line 9
 
 
  <./figures/freq_month_eurovision.png>]
-<figures/map_eurovision.png, id=54, 978.65625pt x 587.19376pt>
+<figures/map_eurovision.png, id=70, 978.65625pt x 587.19376pt>
 File: figures/map_eurovision.png Graphic file (type png)
 
 <use figures/map_eurovision.png>
@@ -305,7 +305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--109
 []\OT1/ptm/m/n/10.95 Figure 2: []Map with ev-ery tweet for
  []
 
-<figures/map_paleo.png, id=55, 978.65625pt x 587.19376pt>
+<figures/map_paleo.png, id=71, 978.65625pt x 587.19376pt>
 File: figures/map_paleo.png Graphic file (type png)
 
 <use figures/map_paleo.png>
@@ -316,44 +316,41 @@ Package pdftex.def Info: figures/map_paleo.png used on input line 116.
 LaTeX Warning: Reference `fig:freq_day_paleo' on page 2 undefined on input line
  122.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
 [2 <./figures/map_eurovision.png (PNG copy)> <./figures/map_paleo.png (PNG copy
 )>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 147.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (./ada2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 147.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 147.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+Package rerunfilecheck Info: File `ada2017.out' has not changed.
+(rerunfilecheck)             Checksum: 990F98E5E9FE0183A9E320E8D068090C;764.
 
-
-Package rerunfilecheck Warning: File `ada2017.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ada2017.out':
-(rerunfilecheck)             Before: 63B7EF017DCF8326803EC53C315D9D75;531
-(rerunfilecheck)             After:  B1E3966268B12E699B9845B56273CCEA;614.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 147.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 5261 strings out of 494910
- 78479 string characters out of 6179836
+ 5268 strings out of 494910
+ 78555 string characters out of 6179836
  159758 words of memory out of 5000000
- 8484 multiletter control sequences out of 15000+600000
+ 8488 multiletter control sequences out of 15000+600000
  19027 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 29i,9n,28p,1002b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,28p,985b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ada2017.pdf (2 pages, 2061213 bytes).
+Output written on ada2017.pdf (2 pages, 2061787 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

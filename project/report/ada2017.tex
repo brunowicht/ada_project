@@ -52,7 +52,7 @@
 \section{Credits}
 
 
-\section{Introduction}
+\section{Dataset Description}
 
 
 \section{Pre-processing}
@@ -76,7 +76,7 @@ After the hashtag extraction, we only keep the tweets with at least one hashtag.
 
 \subsection{Grouping by hashtag}
 
-In order to implement event detection efficiently, we need to compute a dictionary containing for each hashtags the ids of each post that contains it. This is done in the function \texttt{group\_by\_hashtag(...)}. This function iterates over every post in the database and adds the id of the post in the dictionary entry of the hashtag. In this method, we also compute the number of unique authors for this hashtag. With this value, we can easily filter out hashtags if they only concern few posters.
+In order to implement event detection efficiently, we need to compute a dictionary containing for each hashtags the ids of each post that contains it. This is done in the function \texttt{group\_by\_hashtag(...)}. This function iterates over every post in the database and adds the id of the post in the dictionary entry of the hashtag. In this method, we also compute the number of unique authors for this hashtag. With this value, we can easily filter out hashtags that were tweeted by only a few users.
 
 
 \section{Data analysis and visualization}
@@ -119,7 +119,7 @@ We can very clearly see an increase in the number of tweet during the month of m
   \label{fig:map_paleo}
 \end{figure}
 
-The map are displayed in order to get an intuition on the geographic repartitions of tweets. The map are created using folium. We use a MarkerCluster to group every tweet close in space. Other than that, it is a pretty straight forward folium map. Now, look at the first map\ref{fig:freq_day_paleo}. We see that the distribution is regrouped in the cities but overall it is quite uniform if we consider the population density. On the other side, in the second map \ref{fig:map_paleo}, we see that most of the tweets are located in Nyon (this is where the festival takes place). The logic here is that only people close to the event are aware of its happening and will more likely talk about it. Whereas international event are known in switzerland as a whole. Hence a local events lead to tweet localisation around the position of the event and international events have a spread tweet geographic distribution. We will use this knowledge to find the type of an event.
+The map are displayed in order to get an intuition on the geographic repartitions of tweets. The map are created using folium. We use a MarkerCluster to group every tweet close in space. Other than that, it is a pretty straightforward folium map. Now, look at the first map\ref{fig:freq_day_paleo}. We see that the distribution is regrouped in the cities but overall it is quite uniform if we consider the population density. On the other side, in the second map \ref{fig:map_paleo}, we see that most of the tweets are located in Nyon, which is indeed where this music festival takes place. The logic here people close to the actual event are much more likely to talk about it. Whereas international event are known in switzerland as a whole. Hence a local events lead to tweet localisation around the position of the event and international events have a spread tweet geographic distribution. We will use this knowledge to find the type of an event.
 
 
 \section{Event detection}
@@ -131,8 +131,11 @@ In this part of the project we focus on automatic event detection.
 In the data manipulation, we constructed a dictionary containing each hashtag and their respective number of post and unique authors.
 Since hashtags that do not have enough posts and that are posted by only a few users are not likely to be considered events by our detection algorithm. We will be filtering out every hashtag that have less than \texttt{100} overal posts and less than \texttt{50} total authors. 
 
+\section{Event Localization}
 
+\section{Results}
 
+\section{Conclusion}
 
 \begin{thebibliography}{}
 
