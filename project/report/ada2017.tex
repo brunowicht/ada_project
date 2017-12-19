@@ -191,6 +191,19 @@ Now that we have a list of events, we want to determine the location of an event
 But for event that are not necessarily physically happening at some place or that are just trends, a location might not be relevant. Thus in order to determine if the event location is any good, we also compute the mean standard deviation between the computed event location and the location of the tweets. Then we decide that an event is local if the mean standard deviation is below a threshold. If it is not, the event location computed is most likely not relevant and thus we drop it.
 
 \section{Results}
+Here are some statistics to quantify our results:
+
+\begin{itemize}
+  \item Out of 6197 different hashtag on which we run the event detection algorithm, we found events for 2108 of them.
+  \item By grouping by similar dates, we then found 7028 different events.
+  \item Out of these 7028 events, we found a relevant location for 440 of them.
+\end{itemize}
+
+We correctly detected the events we took as example previously, mainly \#jesuischarlie and \#christmas, as we can see in Figure . Actually, for \#christmas, we detected events on the 24th and 25th of every year between 2012-2015, which is quite good (Note that december 2016 was not included in our dataset).
+
+
+
+
 
 \section{Conclusion}
 

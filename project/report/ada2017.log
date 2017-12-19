@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  19 DEC 2017 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.22)  19 DEC 2017 19:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -421,18 +421,21 @@ Underfull \hbox (badness 1874) in paragraph at lines 175--176
  []
 
 [3 <./figures/tweets_years.png> <./figures/freq_event_type1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
- [4
+Underfull \hbox (badness 1383) in paragraph at lines 202--203
+\OT1/ptm/m/n/10.95 ex-am-ple pre-vi-ously, mainly #je-su-is-char-lie and
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+[4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
-
-(./ada2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+ (./ada2017.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `ada2017.out' has not changed.
 (rerunfilecheck)             Checksum: 32EF7F5562CD7F39CABF042685E12A97;1144.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
  6435 strings out of 493014
@@ -456,7 +459,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on ada2017.pdf (4 pages, 2148590 bytes).
+Output written on ada2017.pdf (4 pages, 2149496 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  144 compressed objects within 2 object streams
