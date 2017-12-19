@@ -48,7 +48,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Social networks are widely used to discuss real-life regional and international events. In this report, we describe a way to hashtag-based event detection and localization from a dataset of tweets geolocated in Switzerland. The method proposed is effective for major incidents and popular festivities, and is suitable for longer events lasting multiple days. Our  procedure detected a total of 7082 distinct events and found 440 meaningful local events locations.
+Social networks are widely used to discuss real-life regional and international events. In this report, we describe a hashtag-based way to perform event detection and localization from a dataset of tweets geolocated in Switzerland. The method proposed is effective for major incidents and popular festivities, and is suitable for longer events lasting multiple days. Our procedure detected a total of 7082 distinct events and found 440 meaningful local events locations.
 \end{abstract}
 
 
@@ -128,7 +128,7 @@ In the data manipulation, we constructed a dictionary containing each hashtag an
 Since hashtags that do not have enough posts and that are posted by only a few users are not likely to be considered events by our detection algorithm. We will be filtering out every hashtag that have less than \texttt{100} overal posts and less than \texttt{50} total authors. 
 
 \subsection{Main Challenges}
-They were two main challenges we faced when trying to come up with an accurate event detection algorithm. 
+There were two main challenges we faced when trying to come up with an accurate event detection algorithm. 
 
 The first one is that our dataset spans almost 7 years (from early 2010 to late 2016) and thus the frequency of tweets is obviously much higher at the end of our dataset than at the beginning, as shown in Figure \ref{fig:tweets_year}. Therefore, we had to compare the popularity of a hashtag at a certain date to some kind of baseline, so that our results can adapt to the increasing number of tweets.
 
@@ -141,7 +141,7 @@ The first one is that our dataset spans almost 7 years (from early 2010 to late 
   \label{fig:tweets_year}
 \end{figure}
 
-The second challenge is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an algorithm that detects well all types of events.
+The second challenge is that there are multiple types of events, and they can have very different characteristics. For example, for an event that is scheduled to happen at a certain date, the number of tweets about it gradually increases up to that date. Whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an algorithm that detects well all types of events.
 
 \begin{figure}[htbp]
   \vspace*{-1mm}
@@ -163,7 +163,7 @@ The second challenge is that they are multiple types of events, and they can hav
 
 \subsection{Event Detection Algorithm}
 \subsubsection{Algorithm setup}
-First of all, we decided to use as a metric of hashtag popularity the number of unique users that tweeted that hashtag. We think this is more relevant than using the total number of tweets, because it prevents us from detecting events based on tweets that were posted by a few users only (e.g. twitter bots or extremely active users). For simplicity, we also decided to detect only the day when an event happens, and not the time, as it would more complicated. Thus, our algorithm needs as input only the number of unique authors that tweeted a given hashtag, for each day spanned by our dataset, and for each hashtag.
+First of all, we decided to use as a metric of hashtag popularity the number of unique users that tweeted that hashtag. We think this is more relevant than using the total number of tweets, because it prevents us from detecting events based on tweets that were posted by a few users only (e.g. twitter bots or extremely active users). For simplicity, we also decided to detect only the day when an event happens, and not the time, as it would be more complicated. Thus, our algorithm needs as input only the number of unique authors that tweeted a given hashtag, for each day spanned by our dataset, and for each hashtag.
 
 \subsubsection{Algorithm description}
 The main idea of our event detection algorithm is to compute what we will call an \textit{event score}, for each day spanned by our dataset and for each hashtag. Then, we apply a threshold on that event score to get dates that are detected as an event.
