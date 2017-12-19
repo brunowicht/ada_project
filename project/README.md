@@ -33,3 +33,8 @@ For this project, we will use the Swiss tweets dataset, which contains 22 millio
 2. Create a basic algorithm for event detection using hashtag popularity and test its performance
 3. Optimize the algorithm based on the results (e.g. give less importance to events with high frequency, use the userId to discriminate against events that were only tweeted by a few people, use geolocation to fine tune the algorithm, ...)
 4. Find a way to approximate the geolocation of an event based on the tweets about that event
+
+## Member contributions
+1. Bruno: Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
+2. Davide: 
+3. Tanguy:
