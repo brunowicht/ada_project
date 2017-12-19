@@ -36,5 +36,5 @@ For this project, we will use the Swiss tweets dataset, which contains 22 millio
 
 ## Member contributions
 1. Bruno: Coming up with project main idea, data cleaning and preprocessing: filter tweets with no hashtags and store them in new CSV file, basic idea for event detection.
-2. Davide: 
-3. Tanguy:
+2. Davide: Grouping data by hashtag, report writing, map visualisation, getting unique authors per days. Data cleaning and preprocessing.
+3. Tanguy: Event detection, report writing, frequency plot and map visualisation, event localisation, ...
