@@ -124,6 +124,15 @@ The map are displayed in order to get an intuition on the geographic repartition
 
 \section{Event detection}
 
+In this part of the project we focus on automatic event detection.
+
+\subsection{Filtering out irrelevant hashtags}
+
+In the data manipulation, we constructed a dictionary containing each hashtag and their respective number of post and unique authors.
+Since hashtags that do not have enough posts and that are posted by only a few users are not likely to be considered events by our detection algorithm. We will be filtering out every hashtag that have less than \texttt{100} overal posts and less than \texttt{50} total authors. 
+
+
+
 
 \begin{thebibliography}{}
 
