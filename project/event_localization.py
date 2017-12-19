@@ -3,6 +3,7 @@ import numpy as np
 import math
 import sys
 from datetime import date, timedelta
+import itertools
 
 import folium
 
@@ -67,7 +68,7 @@ def get_event_location(hashtag, dates, df_tag, group_hashtags, event_df=None):
     
     return (event_location, mean_deviation)
 
-def get_events_locations(event_dic, df_tag, group_hashtags, std_threshold=0.25, min_loc_nb=10, return_mean_std=False):
+def get_events_locations(grouped_event_dic, df_tag, group_hashtags, std_threshold=0.25, min_loc_nb=10, return_mean_std=False):
     """Compute the location of the detected events.
     Returns the location of each event, and the mean deviation as well if return_mean_std is True.
     It keeps only event locations for which the mean standard deviation is below std_threshold,
@@ -75,26 +76,46 @@ def get_events_locations(event_dic, df_tag, group_hashtags, std_threshold=0.25, 
     """
     print("Computing events locations...")
     event_locations = {}
-    nb_tags = len(event_dic)
+    nb_tags = len(grouped_event_dic)
     
-    for tag_idx, (hashtag, dates) in enumerate(event_dic.items()):
-        event_df = get_tweets_with_hashtag_at_dates(hashtag, dates, df_tag, group_hashtags)
-        loc_nb = event_df.shape[0]
-        
-        # Compute the location only if we have a minimum of min_tweet_nb valid locations
-        if loc_nb >= min_loc_nb:
-            location_deviation = get_event_location(hashtag, dates, df_tag, group_hashtags, event_df=event_df)
+    for tag_idx, (hashtag, dates_groups) in enumerate(grouped_event_dic.items()):
+        hashtag_locations = []
+        for dates in dates_groups:
             
-            if location_deviation[1] < std_threshold:
-                if return_mean_std:
-                    # Save the location and mean deviation
-                    event_locations[hashtag] = location_deviation
-                else:
-                    # Save only the location
-                    event_locations[hashtag] = location_deviation[0]
+            event_df = get_tweets_with_hashtag_at_dates(hashtag, dates, df_tag, group_hashtags)
+            loc_nb = event_df.shape[0]
+
+            # Compute the location only if we have a minimum of min_tweet_nb valid locations
+            if loc_nb >= min_loc_nb:
+                location_deviation = get_event_location(hashtag, dates, df_tag, group_hashtags, event_df=event_df)
+
+                if location_deviation[1] < std_threshold:
+                    if return_mean_std:
+                        # Save the location and mean deviation
+                        hashtag_locations.append((dates, location_deviation))
+                    else:
+                        # Save only the location
+                        hashtag_locations.append((dates, location_deviation[0]))
+        
+        if len(hashtag_locations) > 0:
+            event_locations[hashtag] = hashtag_locations
         
         sys.stdout.write("\r{0:.2f}%".format((float(tag_idx+1)/nb_tags)*100))
         sys.stdout.flush()
     
     print("\n")
     return event_locations
+
+def group_by_location(events_locations):
+    def group(l):
+        l = [(x[0], list(x[1])) for x in l]
+        it = itertools.groupby(sorted(l, key=lambda x: x[1][0]), lambda x: x[1])
+        for loc, subiter in it:
+            yield [item[0] for item in subiter], loc
+    
+    grouped_events_locations = {}
+    
+    for hashtag, value in events_locations.items():
+        grouped_events_locations[hashtag] = list(group(value))
+    
+    return grouped_events_locations

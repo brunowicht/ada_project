@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import re
+from datetime import date, timedelta, datetime
 
 from const import *
 
@@ -30,4 +31,9 @@ def get_index_with_hashtag(df, hashtag):
 def search_hashtag(hashtag, df, group_hashtags):
     """Filter the given dataset to keep only elements that contain the given hashtag"""
     return df.iloc[group_hashtags.loc[hashtag].tweets_idx]
+
+def parse_date(date_string):
+    """Parse the string of format YYYY-mm-dd into a datetime.date object
+    """
+    return datetime.strptime(date_string, "%Y-%m-%d").date()
     

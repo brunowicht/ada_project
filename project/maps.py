@@ -65,14 +65,15 @@ def get_map_with_hasthtag(hashtag, df_tag, group_hashtags, dates=None):
 
     return swiss_map
 
-def get_events_map(events_locations, event_dic):
+def get_events_map(grouped_events_locations, event_dic):
     swiss_map = folium.Map(SWISS_COORD, zoom_start=8)
     
     coordinates = []
     popups = []
-    for hashtag, location in events_locations.items():
-        coordinates.append(location)
-        popups.append(folium.Popup(popup_html(hashtag, ', '.join(event_dic[hashtag]))))
+    for hashtag, value in grouped_events_locations.items():
+        for dates, location in value:
+            coordinates.append(location)
+            popups.append(folium.Popup("{} \n {}".format(hashtag, ', '.join([str(d) for d in dates])), parse_html=True))
         
     MarkerCluster(locations=coordinates, popups=popups).add_to(swiss_map)
     
