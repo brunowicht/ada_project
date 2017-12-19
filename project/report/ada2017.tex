@@ -130,13 +130,30 @@ Since hashtags that do not have enough posts and that are posted by only a few u
 \subsection{Main Challenges}
 They were two main challenges we faced when trying to come up with an accurate event detection algorithm. 
 
-The first one is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an agorithm that detects well all types of events.
+The first one is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an algorithm that detects well all types of events.
+
+\begin{figure}[htbp]
+  \vspace*{-1mm}
+  \centering
+  \includegraphics[width=\columnwidth]{figures/freq_event_type1.png}
+  \vspace{-5mm}
+  \caption{Example of an unpredictable event}
+  \label{fig:tweets_year}
+\end{figure}
 
 \textbf{FIGURE : predictable vs unpredictable event}
 
 The first second is that our dataset spans almost 7 years (from early 2010 to late 2016) and thus the frequency of tweets is obviously much higher at the end of our dataset than at the beginning. Therefore, we had to compare the popularity of a hashtag at a certain date to some kind of baseline, so that our results can adapt to the increasing number of tweets.
 
-\textbf{FIGURE : nb of tweets 2010-2016}
+\begin{figure}[htbp]
+  \vspace*{-1mm}
+  \centering
+  \includegraphics[width=\columnwidth]{figures/tweets_years.png}
+  \vspace{-5mm}
+  \caption{Number of tweets per years}
+  \label{fig:tweets_year}
+\end{figure}
+
 
 \subsection{Event Detection Algorithm}
 \subsubsection{Algorithm setup}
@@ -144,10 +161,10 @@ First of all, we decided to use as a metric of hashtag popularity the number of 
 
 \subsubsection{Algorithm description}
 The main idea of our event detection algorithm is to compute what we will call an \textit{event score}, for each day spanned by our dataset and for each hashtag. Then, we apply a threshold on that event score to get dates that are detected as an event.
-The event score is obtained by dividing some absolute measure of popularity, by a baseline. That baseline is obtained by computing an average of the number of unique users that tweeted the hashtag over some odd number of days $N$ around the day for which we compute the event score. Dividing by this baseline solves the first problem we talked about. The absolute measure of popularity is obtained by a local weighted average over some odd number of days $M$ around the day for which we compute the event score, where $M << N$. 
+The event score is obtained by dividing some absolute measure of popularity, by a baseline. That baseline is obtained by computing an average of the number of unique users that tweeted the hashtag over some odd number of days $N$ around the day for which we compute the event score. Dividing by this baseline solves the first problem we talked about. The absolute measure of popularity is obtained by a local weighted average over some odd number of days $M$ around the day for which we compute the event score, where $M << N$.
 More specifically, if the number of unique users that tweeted a hashtag at a certain day $d$ is given by $U_d$, and that the kernel for the local weighted average is given by 
 
-$$ \big[ w_{ \floor{ -\frac{M}{2} } }  \dots w_{0}  \dots  w_{ \floor{ \frac{M}{2} } } \big] $$
+$$ K = \big[ w_{ \floor{ -\frac{M}{2} } }  \dots w_{0}  \dots  w_{ \floor{ \frac{M}{2} } } \big] $$
 
 then, the event score at day $d$ is obtained by :
 
@@ -156,10 +173,23 @@ event\_score(d) =  \frac {\sum_{i=-\frac{M}{2}}^{\frac{M}{2}} w_i * U_{d + i} }
 				    {\frac{1}{N} \sum_{j=-\frac{N}{2}}^{\frac{N}{2}}  U_{d + j} }
 $$
 
-\subsubsection{Parameters used}
+The kernel for the weighted local average should be some kind of gaussian, so that the maximum weight is for day $d$.
 
+\subsubsection{Grouping events in time}
+After running the algorithm described above, we have a list of hashtags, and the corresponding days where the event score was above the threshold. What we do next is group this list of days for each hashtag so that the dates that are very close are represented as one event over multiple days. More specifically, we grouped two dates together if they were at most 2 days apart.
+
+\subsubsection{Parameters used}
+To detect events on the Swiss tweets dataset, we used the following parameters:
+
+$$N = 35 $$
+$$M = 3$$
+$$K = \big[ 0.1\ \ 0.8\ \ 0.1 \big]$$
+$$threshold = 4$$
 
 \section{Event Localization}
+Now that we have a list of events, we want to determine the location of an event based on the latitude/longitude data from the tweets that caused this event to be detected. To do so, we chose to compute the median of the latitude and longitude of the tweets. 
+
+But for event that are not necessarily physically happening at some place or that are just trends, a location might not be relevant. Thus in order to determine if the event location is any good, we also compute the mean standard deviation between the computed event location and the location of the tweets. Then we decide that an event is local if the mean standard deviation is below a threshold. If it is not, the event location computed is most likely not relevant and thus we drop it.
 
 \section{Results}
 
