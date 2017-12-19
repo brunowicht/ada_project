@@ -130,7 +130,18 @@ Since hashtags that do not have enough posts and that are posted by only a few u
 \subsection{Main Challenges}
 They were two main challenges we faced when trying to come up with an accurate event detection algorithm. 
 
-The first one is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an algorithm that detects well all types of events.
+The first one is that our dataset spans almost 7 years (from early 2010 to late 2016) and thus the frequency of tweets is obviously much higher at the end of our dataset than at the beginning, as shown in Figure \ref{fig:tweets_year}. Therefore, we had to compare the popularity of a hashtag at a certain date to some kind of baseline, so that our results can adapt to the increasing number of tweets.
+
+\begin{figure}[htbp]
+  \vspace*{-1mm}
+  \centering
+  \includegraphics[width=\columnwidth]{figures/tweets_years.png}
+  \vspace{-5mm}
+  \caption{Number of tweets per years in our dataset. Note that the years 2010 and 2016 are not included in full in the dataset.}
+  \label{fig:tweets_year}
+\end{figure}
+
+The second challenge is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an algorithm that detects well all types of events.
 
 \begin{figure}[htbp]
   \vspace*{-1mm}
@@ -138,22 +149,10 @@ The first one is that they are multiple types of events, and they can have a ver
   \includegraphics[width=\columnwidth]{figures/freq_event_type1.png}
   \vspace{-5mm}
   \caption{Example of an unpredictable event}
-  \label{fig:tweets_year}
+  \label{fig:unpredictable_event}
 \end{figure}
 
 \textbf{FIGURE : predictable vs unpredictable event}
-
-The first second is that our dataset spans almost 7 years (from early 2010 to late 2016) and thus the frequency of tweets is obviously much higher at the end of our dataset than at the beginning. Therefore, we had to compare the popularity of a hashtag at a certain date to some kind of baseline, so that our results can adapt to the increasing number of tweets.
-
-\begin{figure}[htbp]
-  \vspace*{-1mm}
-  \centering
-  \includegraphics[width=\columnwidth]{figures/tweets_years.png}
-  \vspace{-5mm}
-  \caption{Number of tweets per years}
-  \label{fig:tweets_year}
-\end{figure}
-
 
 \subsection{Event Detection Algorithm}
 \subsubsection{Algorithm setup}
@@ -173,7 +172,7 @@ event\_score(d) =  \frac {\sum_{i=-\frac{M}{2}}^{\frac{M}{2}} w_i * U_{d + i} }
 				    {\frac{1}{N} \sum_{j=-\frac{N}{2}}^{\frac{N}{2}}  U_{d + j} }
 $$
 
-The kernel for the weighted local average should be some kind of gaussian, so that the maximum weight is for day $d$.
+The kernel for the weighted local average should be some kind of gaussian, so that the maximum weight is for day $d$. The aim of this local weighted average is to better detect anticipated events, or events lasting a few days. This was implemented to address the second challenge mentioned earlier. 
 
 \subsubsection{Grouping events in time}
 After running the algorithm described above, we have a list of hashtags, and the corresponding days where the event score was above the threshold. What we do next is group this list of days for each hashtag so that the dates that are very close are represented as one event over multiple days. More specifically, we grouped two dates together if they were at most 2 days apart.
