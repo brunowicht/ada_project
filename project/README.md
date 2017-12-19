@@ -6,7 +6,7 @@ Project notebook: [project.ipynb](project.ipynb)
 Project report: [ada2017.pdf](report/ada2017.pdf)
 
 ## Abstract
-Social networks are widely used to discuss real-life regional and international events. In this project, we describe a way to hashtag-based event detection and localization from a dataset of tweets geolocated in Switzerland. The method proposed is effective for major incidents and popular festivities, and is suitable for events lasting one or multiple days. Our  procedure detected a total of 7082 distinct events and found 440 meaningful local events locations.
+Social networks are widely used to discuss real-life regional and international events. In this project, we describe a hashtag-based way to perform event detection and localization from a dataset of tweets geolocated in Switzerland. The method proposed is effective for major incidents and popular festivities, and is suitable for events lasting one or multiple days. Our procedure detected a total of 7082 distinct events and found 440 meaningful local events locations.
 
 ## Research questions
 - How can we accurately detect events and label them based on tweets posted by Swiss users.
