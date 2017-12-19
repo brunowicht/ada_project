@@ -21,7 +21,9 @@
 \usepackage{latexsym}
 \usepackage{graphicx}	% For figure environment
 \usepackage{hyperref}
+\usepackage{mathtools}
 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 %\setlength\titlebox{5cm}
 
@@ -130,6 +132,38 @@ In this part of the project we focus on automatic event detection.
 
 In the data manipulation, we constructed a dictionary containing each hashtag and their respective number of post and unique authors.
 Since hashtags that do not have enough posts and that are posted by only a few users are not likely to be considered events by our detection algorithm. We will be filtering out every hashtag that have less than \texttt{100} overal posts and less than \texttt{50} total authors. 
+
+\subsection{Main Challenges}
+They were two main challenges we faced when trying to come up with an accurate event detection algorithm. 
+
+The first one is that they are multiple types of events, and they can have a very different characteristics. For example, for an event that is scheduled to happen a a certain date, the number of tweets about it gradually increases up to that date, whereas for a sudden unpredictable event, nobody talks about it and then a big peak happens at the time of the event. Moreover, some events might last multiple days or even weeks, as opposed to one day. Therefore this makes it harder to find an agorithm that detects well all types of events.
+
+\textbf{FIGURE : predictable vs unpredictable event}
+
+The first second is that our dataset spans almost 7 years (from early 2010 to late 2016) and thus the frequency of tweets is obviously much higher at the end of our dataset than at the beginning. Therefore, we had to compare the popularity of a hashtag at a certain date to some kind of baseline, so that our results can adapt to the increasing number of tweets.
+
+\textbf{FIGURE : nb of tweets 2010-2016}
+
+\subsection{Event Detection Algorithm}
+\subsubsection{Algorithm setup}
+First of all, we decided to use as a metric of hashtag popularity the number of unique users that tweeted that hashtag. We think this is more relevant than using the total number of tweets, because it prevents us from detecting events based on tweets that were posted by a few users only (e.g. twitter bots or extremely active users). For simplicity, we also decided to detect only the day when an event happens, and not the time, as it would more complicated. Thus, our algorithm needs as input only the number of unique authors that tweeted a given hashtag, for each day spanned by our dataset, and for each hashtag.
+
+\subsubsection{Algorithm description}
+The main idea of our event detection algorithm is to compute what we will call an \textit{event score}, for each day spanned by our dataset and for each hashtag. Then, we apply a threshold on that event score to get dates that are detected as an event.
+The event score is obtained by dividing some absolute measure of popularity, by a baseline. That baseline is obtained by computing an average of the number of unique users that tweeted the hashtag over some odd number of days $N$ around the day for which we compute the event score. Dividing by this baseline solves the first problem we talked about. The absolute measure of popularity is obtained by a local weighted average over some odd number of days $M$ around the day for which we compute the event score, where $M << N$. 
+More specifically, if the number of unique users that tweeted a hashtag at a certain day $d$ is given by $U_d$, and that the kernel for the local weighted average is given by 
+
+$$ \big[ w_{ \floor{ -\frac{M}{2} } }  \dots w_{0}  \dots  w_{ \floor{ \frac{M}{2} } } \big] $$
+
+then, the event score at day $d$ is obtained by :
+
+$$ 
+event\_score(d) =  \frac {\sum_{i=-\frac{M}{2}}^{\frac{M}{2}} w_i * U_{d + i} }
+				    {\frac{1}{N} \sum_{j=-\frac{N}{2}}^{\frac{N}{2}}  U_{d + j} }
+$$
+
+\subsubsection{Parameters used}
+
 
 \section{Event Localization}
 
